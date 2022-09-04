@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import InstagramEmbed from "react-instagram-embed";
 import FooterTrece from "../../shared/footer";
 import HeaderTrece from "../../shared/header";
 import DivProductos from "./divProductos";
@@ -21,7 +22,19 @@ const Home = () => {
         <br />
         <DivProductos productosData={productosData} />
         <br />
-
+        <InstagramEmbed
+          url="https://instagr.am/p/Zw9o4/"
+          clientAccessToken="123|456"
+          maxWidth={320}
+          hideCaption={false}
+          containerTagName="div"
+          protocol=""
+          injectScript
+          onLoading={() => {}}
+          onSuccess={() => {}}
+          onAfterRender={() => {}}
+          onFailure={() => {}}
+        />
         <br />
       </LayoutWebUno>
       <BtnScroll />
