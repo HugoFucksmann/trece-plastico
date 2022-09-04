@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import appTheme from "./theme/appTheme";
+import { ThemeProvider } from "@mui/system";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import TreceProvider from "./context/treceContext";
+import { CssBaseline } from "@mui/material";
+
+import Productos from "./pages/productos";
+import Contacto from "./pages/contacto";
+import DondeComprar from "./pages/dondecomprar";
+import QuienesSomos from "./pages/quienessomos";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={appTheme}>
+      <CssBaseline />
+      <TreceProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/productos" element={<Productos />} />
+            <Route path="/quienessomos" element={<QuienesSomos />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/dondecomprar" element={<DondeComprar />} />
+          </Routes>
+        </BrowserRouter>
+      </TreceProvider>
+    </ThemeProvider>
   );
 }
 
