@@ -5,10 +5,9 @@ import { isMobile } from "../../helpers/isMobile";
 //? Landing, header, body, footer
 
 const LayoutWebUno = (props) => {
-  const { header, landing, footer } = props;
+  const { landing, footer } = props;
   return (
     <div style={{ overflowX: "hidden" }}>
-      <div className={classes.header}>{header}</div>
       <div className={classes.landing}>{landing}</div>
       <div className={classes.body}>{props.children}</div>
       <div className={classes.footer}>{footer}</div>

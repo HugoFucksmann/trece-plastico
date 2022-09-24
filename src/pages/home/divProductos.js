@@ -1,29 +1,40 @@
 import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
-
 import CircularImg from "./baseComp/imgCircular";
-import Title from "./baseComp/title";
 import { Grid } from "@mui/material";
 import { isMobile } from "../../helpers/isMobile";
-import BtnRounded from "./baseComp/btnRounded";
+import TitleTrece from "../../shared/title";
+import BtnRounded from "../../shared/btnRounded";
+import { useNavigate } from "react-router-dom";
 
 const DivProductos = ({ productosData }) => {
+  let navigate = useNavigate();
   return (
     <ContainerDiv>
-      <Title>{productosData.title}</Title>
-      <Typography variant="h4">{productosData.subtitle}</Typography>
+      <TitleTrece>{productosData.title}</TitleTrece>
+
+      <Typography variant="h4" style={{ marginRight: "6%", marginLeft: "6%" }}>
+        Contamos con más de 50 productos realizados en PEBD reciclado.
+        Cumpliendo con estrictas normas de calidad, ofrecen soluciones a la
+        medida de tus necesidades.
+      </Typography>
+
       <Products contained>
         {productosData.productos.map((producto) => (
           <Grid item xs={12} md={4} key={producto.name}>
             <CircularImg src={producto.img} />
             <Typography variant="h2">{producto.name}</Typography>
-            <Typography variant="h6">{producto.descripcion}</Typography>
+            <Typography variant="h6" style={{ margin: "2px 4%" }}>
+              {producto.descripcion}
+            </Typography>
           </Grid>
         ))}
       </Products>
       <br />
       <br />
-      <BtnRounded>{productosData.btnText}</BtnRounded>
+      <BtnRounded onClick={() => navigate("productos")}>
+        {productosData.btnText}
+      </BtnRounded>
     </ContainerDiv>
   );
 };
@@ -35,7 +46,7 @@ const ContainerDiv = styled("div")(({ theme }) => ({
   textAlign: "center",
 
   backgroundColor: "#f2f2f2",
-  padding: "60px 16%",
+  padding: isMobile ? "40px 6%" : "60px 16%",
 }));
 
 const Products = styled(Grid)(({ theme }) => ({

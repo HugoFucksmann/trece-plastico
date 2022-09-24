@@ -12,11 +12,6 @@ const LandingTrece = (props) => {
       <TitleTextDiv>
         <Fade in={true} timeout={700}>
           <Typography variant="h1">
-            {/* <div
-							dangerouslySetInnerHTML={{
-								__html: props.data.txtT,
-							}}
-						/> */}
             {before}
             {coloredStr && coloredStr[0] && (
               <SpanColor>{coloredStr[0]}</SpanColor>
@@ -25,8 +20,8 @@ const LandingTrece = (props) => {
           </Typography>
         </Fade>
 
-        <Fade in={true} timeout={1400}>
-          <Typography variant="h5">{props.data.txt1.toUpperCase()}</Typography>
+        <Fade in={true} timeout={1800}>
+          <Typography variant="h3">{props.data.txt1.toUpperCase()}</Typography>
         </Fade>
       </TitleTextDiv>
     </LayoutLanding>

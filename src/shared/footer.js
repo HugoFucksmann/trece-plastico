@@ -1,70 +1,126 @@
 import styled from "@emotion/styled";
-import { Grid, Typography } from "@mui/material";
+import { Divider, Grid, Typography } from "@mui/material";
 
-import InputC from "../pages/home/baseComp/input";
-import SocialMedia from "../treceweb/bodyComp/socialMedia";
-import BtnRounded from "../pages/home/baseComp/btnRounded";
-import Title from "../pages/home/baseComp/title";
+import fb from "../assets/home/facebook.png";
+import insta from "../assets/home/instagram.png";
+import logo from "../assets/LogoBlanco.png";
+import tel from "../assets/whatsapp.png";
+import marker from "../assets/marker.png";
+import correo from "../assets/gmail.png";
 import { isMobile } from "../helpers/isMobile";
-
-const campos = [
-  { md: 6, name: "Nombre" },
-  { md: 6, name: "Email" },
-  { md: 12, name: "Mensaje" },
-];
 
 const FooterTrece = () => {
   return (
     <ContentFooter>
-      <Title style={{ color: "#f2f2f2" }}>Contacto</Title>
-      <br />
-      <GridForm container spacing={0}>
-        {campos.map(({ md, name }) => (
-          <Grid item xs={12} md={md} key={name}>
-            <InputC label={name} />
-          </Grid>
-        ))}
-        <Grid item xs={12}>
-          <br />
-          <BtnRounded
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={4}>
+          <div
             style={{
-              background: "transparent",
-              float: !isMobile && "right",
-              width: 110,
-              height: 28,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              textAlign: "center",
+              marginRight: !isMobile && 40,
             }}
           >
-            Enviar
-          </BtnRounded>
+            <img
+              src={logo}
+              alt="logggoo"
+              style={{
+                width: isMobile ? "60%" : "70%",
+                margin: "auto",
+                marginBottom: 16,
+              }}
+            />
+            <Typography
+              variant={isMobile ? "h5" : "h4"}
+              style={{ color: " #fff", marginBottom: 16 }}
+            >
+              Especialista en Bolasas
+            </Typography>
+            <div>
+              <img
+                src={insta}
+                atl="instas"
+                width={30}
+                style={{ marginRight: 16 }}
+              />
+              <img src={fb} atl="facebookf" width={30} />
+            </div>
+          </div>
         </Grid>
-      </GridForm>
-      <SocialMedia />
-      <Typography variant="h6" style={{ color: "#f2f2f2" }}>
-        Plasticos Gaetani
-      </Typography>
-      <Typography variant="h6" style={{ color: "#f2f2f2" }}>
-        Cuyo 211, La Reja, Moreno, Buenos Aires
+        <Grid
+          item
+          xs={12}
+          md={4}
+          style={{ marginBottom: isMobile && 12, display: "flex" }}
+        >
+          <img
+            src={marker}
+            atl="facebookf"
+            style={{ width: 26, height: 32, marginRight: 20 }}
+          />
+          <div>
+            <Typography variant="h5" style={{ color: "#fff" }}>
+              Cuyo 211, La Reja
+            </Typography>
+            <Typography
+              variant="h5"
+              style={{ color: "#fff", fontWeight: "inherit" }}
+            >
+              Moreno, Buenos Aires
+            </Typography>
+          </div>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <div style={{ display: "flex", marginBottom: 24 }}>
+            <img
+              src={tel}
+              atl="facebookf"
+              style={{ width: 30, marginRight: 20 }}
+            />
+            <Typography variant="h5" style={{ color: "#fff" }}>
+              +54 9 11 27640403
+            </Typography>
+          </div>
+
+          <div style={{ display: "flex" }}>
+            <img
+              src={correo}
+              atl="facebookf"
+              style={{ width: 30, marginRight: 20 }}
+            />
+            <Typography variant="h5" style={{ color: "#fff" }}>
+              ventas@plasticosgaetani.com.ar
+            </Typography>
+          </div>
+        </Grid>
+      </Grid>
+      <Divider variant="middle" color="#007DCA" style={{ margin: 30 }} />
+      <Typography style={{ textAlign: "center", color: "#007DCA" }}>
+        Desarrollado por
+        <span style={{ fontWeight: "bold" }}>TRECE Comunicación </span>
       </Typography>
     </ContentFooter>
   );
 };
 
 const ContentFooter = styled("div")(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  textAlign: "center",
-  padding: 40,
-  paddingBottom: 60,
+  padding: "40px 16%",
+  paddingBottom: 20,
   backgroundColor: theme.palette.primary.main,
 }));
 
-const GridForm = styled(Grid)(({ theme }) => ({
-  textAlign: "center",
-  border: "2px solid #fff",
-  width: !isMobile ? "50%" : "96%",
-  alignSelf: "center",
-  padding: 20,
+const ContentInfo = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+}));
+
+const ColumnInfo = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
 }));
 
 export default FooterTrece;

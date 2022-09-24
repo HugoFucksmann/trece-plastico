@@ -1,7 +1,8 @@
 import { createTheme } from "@mui/material/styles";
 import museoSansRounded900 from "../fonts/MuseoSansRounded-900.otf";
 import museoSansRounded300 from "../fonts/MuseoSansRounded-300.otf";
-import museoSlab500i from "../fonts/Museo_Slab_500italic.otf";
+import museoSlab500i from "../fonts/Museo_Slab_500.otf";
+import { isMobile } from "../helpers/isMobile";
 
 //*-------- FONTS -------------------
 
@@ -28,9 +29,9 @@ const museoRoundedBold300 = {
 //*-------------------------------------------
 
 const appTheme = createTheme({
-  typography: {
-    fontFamily: ["museoSlab", "museoSansRoundedBold"].join(),
-  },
+  /*  typography: {
+    fontFamily: ["museoSlab"].join(),
+  }, */
   components: {
     MuiCssBaseline: {
       styleOverrides: [museoSlab, museoRoundedBold900, museoRoundedBold300],
@@ -62,35 +63,45 @@ const appTheme = createTheme({
 //*-------- typography-------------------
 
 appTheme.typography.h1 = {
-  fontSize: "2.8rem",
+  fontSize: isMobile ? "2.5rem" : "4.2rem",
+  lineHeight: isMobile ? "56px" : "78px",
   fontFamily: "museoSansRoundedBold",
+  fontStyle: "inherit",
   color: appTheme.palette.primary.main,
 };
 
 appTheme.typography.h2 = {
-  fontSize: "2rem",
+  fontSize: isMobile ? "1.7rem" : "2rem",
   fontFamily: "museoSansRoundedBold",
   color: "#5f6f81",
+  fontStyle: "inherit",
 };
 appTheme.typography.h3 = {
-  fontSize: "1.6em",
+  fontSize: isMobile ? "1.3rem" : "1.6em",
+  lineHeight: isMobile && "36px",
   fontFamily: "museoSlab",
   color: appTheme.palette.primary.soft,
+  fontStyle: "inherit",
 };
 appTheme.typography.h4 = {
-  fontSize: "1.4em",
+  fontSize: isMobile ? "1.1em" : "1.4em",
   fontFamily: "museoSlab",
   color: appTheme.palette.primary.soft,
+  fontWeight: "normal",
+  fontStyle: "normal",
+  fontStyle: "inherit",
 };
 appTheme.typography.h5 = {
-  fontSize: "1em",
+  fontSize: isMobile ? "0.8em" : "1em",
   fontFamily: "museoSlab",
   color: appTheme.palette.primary.soft,
+  fontStyle: "inherit",
 };
 appTheme.typography.h6 = {
-  fontSize: "0.8em",
+  fontSize: isMobile ? "0.6em" : "0.9rem",
   fontFamily: "museoSlab",
   color: "#5f6f81",
+  fontStyle: "inherit",
 };
 //*-------------------------------------------
 

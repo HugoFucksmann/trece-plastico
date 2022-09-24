@@ -6,9 +6,12 @@ import TreceProvider from "./context/treceContext";
 import { CssBaseline } from "@mui/material";
 
 import Productos from "./pages/productos";
-import Contacto from "./pages/contacto";
+import Sumate from "./pages/sumate";
 import DondeComprar from "./pages/dondecomprar";
 import QuienesSomos from "./pages/quienessomos";
+import HeaderTrece from "./shared/header";
+import FooterTrece from "./shared/footer";
+import BtnScroll from "./shared/btnScrollToTop";
 
 function App() {
   return (
@@ -16,13 +19,17 @@ function App() {
       <CssBaseline />
       <TreceProvider>
         <BrowserRouter>
+          <HeaderTrece />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/productos" element={<Productos />} />
             <Route path="/quienessomos" element={<QuienesSomos />} />
-            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/sumate" element={<Sumate />} />
             <Route path="/dondecomprar" element={<DondeComprar />} />
           </Routes>
+          <FooterTrece />
+
+          <BtnScroll />
         </BrowserRouter>
       </TreceProvider>
     </ThemeProvider>

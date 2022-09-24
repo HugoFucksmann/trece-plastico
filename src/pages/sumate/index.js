@@ -2,12 +2,13 @@ import { useContext, useEffect } from "react";
 import { TreceContext } from "../../context/treceContext";
 import BannerSubPage from "../../shared/bannerSubPage";
 import ContainerSubPage from "../../shared/containerSubPage";
-import ItemsDirDiv from "./itemsdirdiv";
-import MapaDiv from "./mapaDiv";
+
 import { goToTop } from "../../helpers/goToTop";
 import { Fade } from "@mui/material";
+import SumateItems from "./sumateItems";
+import SumateForm from "./SumateForm";
 
-const DondeComprar = () => {
+const Sumate = () => {
   useEffect(() => {
     goToTop();
   }, []);
@@ -16,14 +17,14 @@ const DondeComprar = () => {
   return (
     <Fade in={true}>
       <div>
-        <BannerSubPage page={BannerSubPageData.dondecomprar} />
+        <BannerSubPage page={BannerSubPageData.sumate} />
         <ContainerSubPage>
-          <MapaDiv />
-          <ItemsDirDiv />
+          <SumateItems />
+          <SumateForm />
         </ContainerSubPage>
       </div>
     </Fade>
   );
 };
 
-export default DondeComprar;
+export default Sumate;

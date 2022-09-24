@@ -15,13 +15,11 @@ import { Slide } from "@mui/material";
 import logo from "../assets/home/Logo-Plasticos.png";
 
 import { isMobile } from "../helpers/isMobile";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function HideOnScroll(props) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
+
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
   });
@@ -35,14 +33,15 @@ function HideOnScroll(props) {
 
 const HeaderTrece = (props) => {
   let navigate = useNavigate();
+  const location = useLocation();
   const [anchorElNav, setAnchorElNav] = React.useState(false);
   const [headerBack, setHeaderBack] = React.useState(false);
 
   React.useEffect(() => {
     let reg = window.addEventListener("scroll", handleScroll);
-
-    // return window.removeEventListener(reg);
-  }, []);
+    setAnchorElNav(false);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location]);
 
   const handleScroll = () => {
     if (window.pageYOffset > 60) {
@@ -61,7 +60,7 @@ const HeaderTrece = (props) => {
           paddingLeft: !isMobile && 70,
         }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth={isMobile ? "lg" : "xl"}>
           <Toolbar disableGutters>
             <Box
               sx={{
@@ -104,23 +103,29 @@ const HeaderTrece = (props) => {
                 ))}
               </Menu>
             </Box>
-            <img src={props.logo} alt="logo" width={180} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{
-                flexGrow: 1,
-                display: { xs: "flex", md: "none" },
+            <div
+              style={{
+                width: isMobile && "100%",
+                display: isMobile && "flex",
+                justifyContent: "center",
               }}
             >
-              {props.title}
-            </Typography>
+              <img
+                onClick={() => navigate("/")}
+                src={props.logo}
+                alt="logo"
+                style={{
+                  margin: isMobile ? 12 : 14,
+                  height: isMobile ? 34 : 50,
+                  cursor: "pointer",
+                }}
+              />
+            </div>
+
             <Box
               sx={{
                 flexGrow: 1,
-                justifyContent: "right",
-                marginRight: "2vw",
+                justifyContent: "center",
                 display: { xs: "none", md: "flex" },
               }}
             >
@@ -129,10 +134,15 @@ const HeaderTrece = (props) => {
                   onClick={() => navigate(page.link)}
                   key={page.link}
                   sx={{
-                    marginLeft: 3,
+                    marginLeft: 2.4,
                   }}
                 >
-                  <Typography variant="h5">{page.txt}</Typography>
+                  <Typography
+                    variant="h5"
+                    style={{ fontFamily: "museoSansRoundedBold" }}
+                  >
+                    {page.txt}
+                  </Typography>
                 </Button>
               ))}
             </Box>
@@ -150,6 +160,7 @@ HeaderTrece.defaultProps = {
     { txt: "Productos", link: "productos" },
     { txt: "Quienes Somos", link: "quienessomos" },
     { txt: "Donde Comprar", link: "dondecomprar" },
+    { txt: "Sumate", link: "sumate" },
   ],
 };
 

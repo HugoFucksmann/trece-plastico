@@ -1,0 +1,21 @@
+import styled from "@emotion/styled";
+import { isMobile } from "../helpers/isMobile";
+
+const ContainerSubPage = (props) => {
+  return <ContainerDiv>{props.children}</ContainerDiv>;
+};
+
+const ContainerDiv = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  textAlign: "center",
+  //height: "90vh",
+  // backgroundColor: "#EBF0F1",
+  paddingRight: !isMobile ? "14%" : "8%",
+  paddingLeft: !isMobile ? "14%" : "8%",
+  maxWidth: 1800,
+  margin: "auto",
+}));
+
+export default ContainerSubPage;

@@ -1,41 +1,35 @@
-import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
-import Title from "./baseComp/title";
 import { isMobile } from "../../helpers/isMobile";
-import BtnRounded from "./baseComp/btnRounded";
-
-//gradiant azul
-// background: "linear-gradient(to right bottom, #36EAEF, #6B0AC9)",
+import { useNavigate } from "react-router-dom";
+import BtnRounded from "../../shared/btnRounded";
+import TitleTrece from "../../shared/title";
 
 const DivQuienes = (props) => {
+  let navigate = useNavigate();
   return (
-    <ContainerDiv>
-      <Title>{props.title}</Title>
-      <Typography variant="h4">{props.subtitle}</Typography>
+    <div
+      style={{
+        margin: isMobile ? "80px 4%" : "16vh 0px",
+      }}
+    >
+      <TitleTrece>{gggg.title}</TitleTrece>
+      <Typography variant="h4">{gggg.subtitle}</Typography>
       <br />
 
-      <BtnRounded click={props.func}>{props.btnText}</BtnRounded>
-    </ContainerDiv>
+      <BtnRounded onClick={() => navigate("/quienessomos")}>
+        {gggg.btnText}
+      </BtnRounded>
+    </div>
   );
 };
 
-const ContainerDiv = styled("div")(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  textAlign: "center",
-  margin: 100,
-  marginRight: !isMobile ? "16%" : "4%",
-  marginLeft: !isMobile ? "16%" : "4%",
-}));
-
-DivQuienes.defaultProps = {
+const gggg = {
   title: "quiens somos",
   btnText: "CONOCENOS",
-  subtitle: `Somos una empresa dedicada a la confección de bolsas de polietileno
-  especializada en bolsas de residuo y consorcio, tanto domiciliarias como
-  patológicas, así como también en bolsas de polietileno destinadas a
-  aplicaciones industriales especiales.`,
+  subtitle: `Creamos bolsas de polietileno para diferentes aplicaciones en el mercado. Diseñamos
+  propuestas para empresas, instituciones y distribuidores de todo el país.
+  Somos una empresa que une compromiso ambiental y calidad para brindarte
+  productos confiables.`,
 };
 
 export default DivQuienes;

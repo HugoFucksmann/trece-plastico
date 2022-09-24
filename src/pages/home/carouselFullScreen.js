@@ -10,6 +10,7 @@ import "./styles.css";
 import { EffectFade, Mousewheel, Pagination } from "swiper";
 import LandingTrece from "./landing";
 import { TreceContext } from "../../context/treceContext";
+import { isMobile } from "../../helpers/isMobile";
 
 export default function CarouselFullScreen(props) {
   const { landingData } = useContext(TreceContext);
@@ -18,7 +19,7 @@ export default function CarouselFullScreen(props) {
     <div
       {...props}
       style={{
-        height: "100vh",
+        height: isMobile ? "80vh" : "100vh",
         width: "100%",
       }}
     >
