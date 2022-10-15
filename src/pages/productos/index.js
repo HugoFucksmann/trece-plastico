@@ -37,10 +37,10 @@ const dataFirstProduct = {
   imagen: principal,
   text: {
     title: "",
-    txt: `Contamos con más de 50 productos,
+    txt1: `Contamos con más de 50 productos,
     los cuales responden a diferentes
-    necesidades del mercado.
-    Cada uno es realizado bajo estrictas
+    necesidades del mercado.`,
+    txt2: `Cada uno es realizado bajo estrictas
     normas de calidad, lo cual nos
     asegura resultados de excelencia.`,
   },

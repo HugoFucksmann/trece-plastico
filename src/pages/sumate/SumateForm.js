@@ -3,6 +3,7 @@ import { Grid, styled, Typography } from "@mui/material";
 import { isMobile } from "../../helpers/isMobile";
 import InputC from "../../shared/input";
 import BtnRounded from "../../shared/btnRounded";
+
 const SumateForm = () => {
   const [formData, setFormData] = useState({
     nombre: "",
@@ -12,12 +13,11 @@ const SumateForm = () => {
     rubro: "",
     telefono: "",
   });
-  console.log("form data ", formData);
+
   return (
     <form
-      action={`mailto:info@plasticosgaetani.com.ar?subject=nombre:\xa0${formData.nombre}\xa0comercio:\xa0${formData.nombrecomercio}&body=ciudad:${formData.ciudad}\xa0rubro:\xa0${formData.rubro}\xa0producto:\xa0${formData.producto}\xa0telefono:\xa0${formData.telefono}`}
-      method="post"
-      enctype="text/plain"
+      action="https://formsubmit.co/info@plasticosgaetani.com.ar"
+      method="POST"
     >
       <GridForm
         container
@@ -34,6 +34,7 @@ const SumateForm = () => {
           <Grid item xs={12} md={md} key={name}>
             <InputC
               label={name}
+              name={name}
               onChange={(e) =>
                 setFormData({ ...formData, [campo]: e.target.value })
               }
@@ -43,7 +44,6 @@ const SumateForm = () => {
         <Grid item xs={12}>
           <BtnRounded
             type="submit"
-            click={() => {}}
             style={{
               background: "#47CBBA",
               fontFamily: "museoSansRoundedBold",
@@ -71,12 +71,12 @@ const campos = [
   { md: 6, name: "Rubro", campo: "rubro" },
   { md: 6, name: "Ciudad", campo: "ciudad" },
   {
-    md: 6,
+    md: 12,
     name: "¿Te interesa algún producto en particular?",
     campo: "producto",
   },
   { md: 6, name: "Teléfono", campo: "telefono" },
-  /* { md: 6, name: "Email", campo: "email" }, */
+  { md: 6, name: "Email", campo: "email" },
 ];
 
 export default SumateForm;

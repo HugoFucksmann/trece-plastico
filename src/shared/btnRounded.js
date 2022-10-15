@@ -5,8 +5,6 @@ const BtnRounded = (props) => {
   return (
     <BtnStyle
       size="large"
-      //variant="contained"
-      onClick={() => props.click()}
       style={{ fontFamily: "museoSansRoundedBold" }}
       {...props}
     >

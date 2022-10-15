@@ -17,8 +17,8 @@ const SliderProductos = (props) => {
   const { ItemCount = 3 } = props;
   return (
     <div>
-      {props.dataProductos.map((obj) => (
-        <>
+      {props.dataProductos.map((obj, i) => (
+        <div key={obj.title + i + 100}>
           <Typography
             variant="h2"
             style={{ textAlign: "left", marginLeft: 60, color: "#000" }}
@@ -35,14 +35,13 @@ const SliderProductos = (props) => {
             }}
           />
           <Slider count={ItemCount} data={obj.slider} />
-        </>
+        </div>
       ))}
     </div>
   );
 };
 
 const Slider = ({ count, data }) => {
-  console.log("COUNT ", count);
   return (
     <Swiper
       slidesPerView={isMobile ? 1 : count}
@@ -59,8 +58,9 @@ const Slider = ({ count, data }) => {
         paddingLeft: 42,
       }}
     >
-      {data.map((obj) => (
+      {data.map((obj, i) => (
         <SwiperSlide
+          key={obj.title + i}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -76,6 +76,7 @@ const Slider = ({ count, data }) => {
 const ItemSlider = ({ obj }) => {
   return (
     <div
+      key={obj.title}
       style={{
         marginTop: 20,
         marginBottom: 40,
@@ -111,7 +112,7 @@ const ItemSlider = ({ obj }) => {
       </Typography>
 
       {obj.types.map((text) => (
-        <Typography variant="h6" style={{ color: "#000" }}>
+        <Typography key={text} variant="h6" style={{ color: "#000" }}>
           {text}
         </Typography>
       ))}

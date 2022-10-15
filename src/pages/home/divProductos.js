@@ -19,7 +19,7 @@ const DivProductos = ({ productosData }) => {
         medida de tus necesidades.
       </Typography>
 
-      <Products contained>
+      <Products>
         {productosData.productos.map((producto) => (
           <Grid item xs={12} md={4} key={producto.name}>
             <CircularImg src={producto.img} />

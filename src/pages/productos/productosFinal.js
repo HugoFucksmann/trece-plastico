@@ -94,7 +94,9 @@ const ItemSlider = ({ obj }) => {
       </Typography>
 
       {obj.types.map((text) => (
-        <Typography variant="h6"> {text} </Typography>
+        <Typography key={text} variant="h6">
+          {text}
+        </Typography>
       ))}
     </div>
   );
