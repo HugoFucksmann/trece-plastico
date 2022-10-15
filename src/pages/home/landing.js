@@ -11,7 +11,7 @@ const LandingTrece = (props) => {
     <LayoutLanding {...props}>
       <TitleTextDiv>
         <Fade in={true} timeout={700}>
-          <Typography variant="h1">
+          <Typography variant="h1" style={{ marginBottom: 22 }}>
             {before}
             {coloredStr && coloredStr[0] && (
               <SpanColor>{coloredStr[0]}</SpanColor>
@@ -21,7 +21,7 @@ const LandingTrece = (props) => {
         </Fade>
 
         <Fade in={true} timeout={1800}>
-          <Typography variant="h3">{props.data.txt1.toUpperCase()}</Typography>
+          <Typography variant="h4">{props.data.txt1.toUpperCase()}</Typography>
         </Fade>
       </TitleTextDiv>
     </LayoutLanding>
@@ -39,7 +39,7 @@ const LayoutLanding = styled("div")(({ theme, data }) => ({
 const TitleTextDiv = styled("div")(({ theme, data }) => ({
   height: "100%",
   width: isMobile ? "90%" : "35%",
-  paddingLeft: isMobile ? "8%" : "5%",
+  paddingLeft: isMobile ? "8%" : "8%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",

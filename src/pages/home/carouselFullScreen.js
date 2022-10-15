@@ -19,7 +19,7 @@ export default function CarouselFullScreen(props) {
     <div
       {...props}
       style={{
-        height: isMobile ? "80vh" : "100vh",
+        height: isMobile ? "80vh" : "74vh",
         width: "100%",
       }}
     >

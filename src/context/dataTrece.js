@@ -99,13 +99,16 @@ export const quienesItemData = [
     text: {
       title1: "Un poco de",
       title2: "nuestra historia",
-      txt: ` Somos una empresa fundada en 2015 dedicada a la confección de bolsas de
-    polietileno, especializada en bolsas de residuo y consorcio, tanto
-    domiciliarias como patológicas, así como también en bolsas de
-    polietileno destinadas a aplicaciones industriales especiales Contamos
-    con personal especializado en cada paso del proceso de fabricación, así
-    como maquinarias automáticas y semiautomáticas, lo que garantizan una
-    excelente calidad del producto terminado.`,
+      txt1: `Somos una empresa argentina que dio sus primeros pasos en el año
+      2015. Desde ese momento, nos especializamos en la fabricación de
+      bolsas de polietileno para diferentes aplicaciones: domiciliarias,
+      industriales y gestión de residuos especiales.`,
+      txt2: `Contamos con un equipo de colaboradores especializado en el
+      tratamiento de la materia prima, lo que nos asegura resultados de
+      máxima calidad en cada uno de nuestros productos.`,
+      txt3: `Desde Plásticos Gaetani tenemos una misión: acompañar a cada uno
+      de nuestros clientes con soluciones eficientes y a la medida de sus
+      necesidades.`,
     },
   },
   {
@@ -113,13 +116,17 @@ export const quienesItemData = [
     text: {
       title1: "",
       title2: "",
-      txt: ` Somos una empresa fundada en 2015 dedicada a la confección de bolsas de
-    polietileno, especializada en bolsas de residuo y consorcio, tanto
-    domiciliarias como patológicas, así como también en bolsas de
-    polietileno destinadas a aplicaciones industriales especiales Contamos
-    con personal especializado en cada paso del proceso de fabricación, así
-    como maquinarias automáticas y semiautomáticas, lo que garantizan una
-    excelente calidad del producto terminado.`,
+      txt1: `Las empresas argentinas tenemos un fuerte desafío en el actual
+      contexto de la región. Desde nuestro espacio buscamos generar
+      alianzas que potencien el crecimiento de la industria y las compařñías
+      emergentes del país.`,
+      txt2: `Actuamos de forma activa en áreas de desarrollo y formación de
+      líderes con el objetivo de impulsar el sector y mejorar las condiciones
+      laborales de cada colaborador.`,
+      txt3: `Las empresas argentinas tenemos un fuerte desafío en el actual
+      contexto de la región. Desde nuestro espacio buscamos generar
+      alianzas que potencien el crecimiento de la industria y las compařñías
+      emergentes del país.`,
     },
   },
   {

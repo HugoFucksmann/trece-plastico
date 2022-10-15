@@ -21,7 +21,7 @@ const SliderProductos = (props) => {
         <>
           <Typography
             variant="h2"
-            style={{ textAlign: "left", marginLeft: 60 }}
+            style={{ textAlign: "left", marginLeft: 60, color: "#000" }}
           >
             {obj.title}
           </Typography>
@@ -86,13 +86,18 @@ const ItemSlider = ({ obj }) => {
       <img src={obj.img} alt={isPlainObject.title} />
 
       <Typography
-        variant="h3"
-        style={{ fontFamily: "museoSansRoundedBold", color: "#5F6F81" }}
+        variant="h4"
+        style={{
+          fontFamily: "museoSansRoundedBold",
+          color: "#5F6F81",
+          marginTop: 16,
+        }}
       >
         {obj.title}
       </Typography>
+
       <Typography
-        variant="h4"
+        variant="h5"
         style={{ fontWeight: "normal", marginBottom: 12 }}
       >
         {obj.sub}
@@ -102,12 +107,13 @@ const ItemSlider = ({ obj }) => {
         variant="h5"
         style={{ fontWeight: "normal", marginBottom: 12 }}
       >
-        {" "}
-        {obj.txt}{" "}
+        {obj.txt}
       </Typography>
 
       {obj.types.map((text) => (
-        <Typography variant="h6"> {text} </Typography>
+        <Typography variant="h6" style={{ color: "#000" }}>
+          {text}
+        </Typography>
       ))}
     </div>
   );

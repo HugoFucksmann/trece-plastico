@@ -9,10 +9,12 @@ const TitleTrece = (props) => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        marginBottom: 20,
+        marginBottom: 40,
       }}
     >
-      <Typography variant="h2">{props.children}</Typography>
+      <Typography variant="h2" color={"#000"}>
+        {props.children}
+      </Typography>
       <div
         style={{
           borderTop: "4px solid #6ec4b0",

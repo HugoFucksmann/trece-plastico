@@ -14,9 +14,11 @@ const DivQuienes = (props) => {
     >
       <TitleTrece>{gggg.title}</TitleTrece>
       <Typography variant="h4">{gggg.subtitle}</Typography>
-      <br />
 
-      <BtnRounded onClick={() => navigate("/quienessomos")}>
+      <BtnRounded
+        onClick={() => navigate("/quienessomos")}
+        style={{ marginTop: 50 }}
+      >
         {gggg.btnText}
       </BtnRounded>
     </div>

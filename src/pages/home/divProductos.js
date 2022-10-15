@@ -23,16 +23,18 @@ const DivProductos = ({ productosData }) => {
         {productosData.productos.map((producto) => (
           <Grid item xs={12} md={4} key={producto.name}>
             <CircularImg src={producto.img} />
-            <Typography variant="h2">{producto.name}</Typography>
-            <Typography variant="h6" style={{ margin: "2px 4%" }}>
+            <Typography variant="h3">{producto.name}</Typography>
+            {/*  <Typography variant="h6" style={{ margin: "2px 4%" }}>
               {producto.descripcion}
-            </Typography>
+            </Typography> */}
           </Grid>
         ))}
       </Products>
-      <br />
-      <br />
-      <BtnRounded onClick={() => navigate("productos")}>
+
+      <BtnRounded
+        onClick={() => navigate("productos")}
+        style={{ marginTop: 60 }}
+      >
         {productosData.btnText}
       </BtnRounded>
     </ContainerDiv>

@@ -139,7 +139,11 @@ const HeaderTrece = (props) => {
                 >
                   <Typography
                     variant="h5"
-                    style={{ fontFamily: "museoSansRoundedBold" }}
+                    style={{
+                      fontFamily: "museoSansRoundedBold",
+
+                      color: "#000",
+                    }}
                   >
                     {page.txt}
                   </Typography>

@@ -20,11 +20,15 @@ const ItemsDirDiv = () => {
             display: "flex",
           }}
         >
-          {" "}
           <img
             alt={obj.dire}
             src={lugar}
-            style={{ marginRight: 20, height: 32, marginTop: 10 }}
+            style={{
+              height: 32,
+              marginTop: 10,
+
+              marginRight: 20,
+            }}
           />
           <div>
             <Typography

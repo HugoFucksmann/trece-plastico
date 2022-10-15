@@ -8,7 +8,7 @@ const DivIg = () => {
   return (
     <div
       style={{
-        margin: isMobile ? "60px 8%" : "66px 20%",
+        margin: isMobile ? "60px 8%" : "66px 24%",
         textAlign: "center",
       }}
     >
@@ -22,6 +22,7 @@ const DivIg = () => {
       >
         {igs.map((obj) => (
           <Grid
+            key={obj.alt}
             item
             md={4}
             xs={6}

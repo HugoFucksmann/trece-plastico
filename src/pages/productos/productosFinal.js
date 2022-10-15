@@ -26,6 +26,22 @@ const ProductosFinal = () => {
           marginBottom: isMobile && "-8.8vw",
         }}
       />
+      <Typography
+        variant="h3"
+        style={{
+          color: "#151F5B",
+          textAlign: "center",
+          marginTop: 40,
+        }}
+      >
+        Un compañero confiable
+      </Typography>
+      <Typography
+        variant="h3"
+        style={{ color: "#151F5B", textAlign: "center" }}
+      >
+        para las tareas del hogar.
+      </Typography>
       <div
         style={{
           display: "flex",
@@ -57,7 +73,12 @@ const ItemSlider = ({ obj }) => {
         style={{ height: "auto", width: "100%" }}
       />
 
-      <Typography variant="h3"> {obj.title} </Typography>
+      <Typography
+        variant="h3"
+        style={{ marginTop: 16, fontFamily: "museoSansRoundedBold" }}
+      >
+        {obj.title}
+      </Typography>
       <Typography
         variant="h4"
         style={{ fontWeight: "normal", marginBottom: 12 }}

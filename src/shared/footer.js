@@ -43,9 +43,23 @@ const FooterTrece = () => {
                 src={insta}
                 atl="instas"
                 width={30}
-                style={{ marginRight: 16 }}
+                onClick={() => window.open("www.google.com.ar", "_blank")}
+                style={{ marginRight: 16, cursor: "pointer" }}
               />
-              <img src={fb} atl="facebookf" width={30} />
+              <img
+                onClick={() => window.open("HOLA")}
+                src={fb}
+                atl="facebookf"
+                width={30}
+                style={{ marginRight: 16, cursor: "pointer" }}
+              />
+              <img
+                onClick={() => window.open("HOLA")}
+                src={fb}
+                atl="facebookf"
+                width={30}
+                style={{ cursor: "pointer" }}
+              />
             </div>
           </div>
         </Grid>

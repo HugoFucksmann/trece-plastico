@@ -12,27 +12,39 @@ const SumateItems = () => {
         marginBottom: 40,
       }}
     >
-      <Typography variant="h3">
-        Diversificá tu propuesta con{" "}
-        <span style={{ color: "#47CBBA" }}> productos </span>
-      </Typography>
-      <Typography variant="h3" style={{ marginBottom: 20, color: "#47CBBA" }}>
-        confiables y de la más alta calidad.
-      </Typography>
-      <Typography variant="h3">Siendo parte de nuestra red de</Typography>
-      <Typography variant="h3" style={{ marginBottom: 60 }}>
-        distribuidores, obtenés:
-      </Typography>
+      <div style={{ marginBottom: 160 }}>
+        <Typography variant="h3">
+          Diversificá tu propuesta con{" "}
+          <span style={{ color: "#47CBBA" }}> productos </span>
+        </Typography>
+        <Typography variant="h3" style={{ marginBottom: 20, color: "#47CBBA" }}>
+          confiables y de la más alta calidad.
+        </Typography>
+        <Typography variant="h3">Siendo parte de nuestra red de</Typography>
+        <Typography variant="h3" style={{ marginBottom: 60 }}>
+          distribuidores, obtenés:
+        </Typography>
+      </div>
       <Grid container spacing={6} alignItems="center" justifyContent="center">
         {sumateItemsData.map((obj, i) => (
-          <Grid item xs={12} sm={6} md={4} key={obj.txt}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            key={obj.txt}
+            style={{ marginBottom: !isMobile && 50 }}
+          >
             <img src={obj.icon} style={{ width: isMobile ? "30%" : "64%" }} />
             <Typography
-              variant={isMobile ? "h4" : "h5"}
-              style={{ height: 40, marginTop: 10 }}
+              variant={isMobile ? "h4" : "h4"}
+              style={{
+                height: 40,
+                marginTop: 12,
+                fontFamily: "museoSansRoundedBold",
+              }}
             >
-              {" "}
-              {obj.txt}{" "}
+              {obj.txt}
             </Typography>
           </Grid>
         ))}

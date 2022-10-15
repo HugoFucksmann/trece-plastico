@@ -63,8 +63,8 @@ const appTheme = createTheme({
 //*-------- typography-------------------
 
 appTheme.typography.h1 = {
-  fontSize: isMobile ? "2.5rem" : "4.2rem",
-  lineHeight: isMobile ? "56px" : "78px",
+  fontSize: isMobile ? "2.5rem" : "3.8rem",
+  lineHeight: isMobile ? "56px" : "66px",
   fontFamily: "museoSansRoundedBold",
   fontStyle: "inherit",
   color: appTheme.palette.primary.main,
@@ -72,6 +72,7 @@ appTheme.typography.h1 = {
 
 appTheme.typography.h2 = {
   fontSize: isMobile ? "1.7rem" : "2rem",
+  lineHeight: !isMobile && "40px",
   fontFamily: "museoSansRoundedBold",
   color: "#5f6f81",
   fontStyle: "inherit",
@@ -80,13 +81,13 @@ appTheme.typography.h3 = {
   fontSize: isMobile ? "1.3rem" : "1.6em",
   lineHeight: isMobile && "36px",
   fontFamily: "museoSlab",
-  color: appTheme.palette.primary.soft,
+  color: "#000",
   fontStyle: "inherit",
 };
 appTheme.typography.h4 = {
   fontSize: isMobile ? "1.1em" : "1.4em",
   fontFamily: "museoSlab",
-  color: appTheme.palette.primary.soft,
+  color: "#000",
   fontWeight: "normal",
   fontStyle: "normal",
   fontStyle: "inherit",

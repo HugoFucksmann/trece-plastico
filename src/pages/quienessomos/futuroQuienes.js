@@ -33,7 +33,7 @@ const GridImg = () => {
     <Grid item md={5} xs={12}>
       <img
         src={futuro}
-        style={{ width: "100%", height: "auto" }}
+        style={{ width: "85%", height: "auto", paddingLeft: 60 }}
         alt="futuro"
       />
     </Grid>
@@ -55,10 +55,10 @@ const GridText = () => {
           marginTop: -28,
           display: "flex",
           alignItems: "center",
-          marginBottom: 30,
+          marginBottom: 50,
         }}
       >
-        <img src={markF} alt="dgfdsg" style={{ width: "26%" }} />
+        <img src={markF} alt="dgfdsg" style={{ width: "18%" }} />
         <div style={{ marginLeft: isMobile ? 20 : 30 }}>
           <Typography variant="h2">El futuro si</Typography>
 
@@ -67,10 +67,21 @@ const GridText = () => {
           </Typography>
         </div>
       </div>
+      <div
+        style={{
+          width: 36,
+          borderBottom: "4px solid #00C5B1",
+          borderRadius: 5,
+          marginBottom: 40,
+          marginTop: 10,
+        }}
+      ></div>
       <Typography variant="h4">{data.txt1}</Typography>
       <br />
       <Typography variant="h4">{data.txt2}</Typography> <br />
-      <Typography variant="h4">{data.txt3}</Typography>
+      <Typography variant="h4" style={{ marginBottom: !isMobile && 64 }}>
+        {data.txt3}
+      </Typography>
     </Grid>
   );
 };
