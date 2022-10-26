@@ -1,6 +1,6 @@
 import appTheme from "./theme/appTheme";
 import { ThemeProvider } from "@mui/system";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import TreceProvider from "./context/treceContext";
 import { CssBaseline } from "@mui/material";
@@ -26,9 +26,9 @@ function App() {
             <Route path="/quienessomos" element={<QuienesSomos />} />
             <Route path="/sumate" element={<Sumate />} />
             <Route path="/dondecomprar" element={<DondeComprar />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <FooterTrece />
-
           <BtnScroll />
         </BrowserRouter>
       </TreceProvider>

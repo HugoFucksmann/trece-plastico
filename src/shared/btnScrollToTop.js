@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { Button } from "@mui/material";
+
 import styled from "@emotion/styled";
-import { IconButton } from "@mui/material";
 import { Box } from "@mui/material";
 
 const BtnScroll = () => {

@@ -19,11 +19,7 @@ const SumateForm = () => {
       action="https://formsubmit.co/info@plasticosgaetani.com.ar"
       method="POST"
     >
-      <GridForm
-        container
-        spacing={2}
-        style={{ backgroundColor: "#EBF0F1", marginTop: 40 }}
-      >
+      <GridForm container spacing={2}>
         <Grid item xs={12} md={12}>
           <Typography variant="h3" style={{ marginBottom: isMobile ? 20 : 40 }}>
             Completá nuestro formulario y nuestros representantes se pondrán en
@@ -39,6 +35,18 @@ const SumateForm = () => {
                 setFormData({ ...formData, [campo]: e.target.value })
               }
             />
+            <input
+              type="hidden"
+              name="_next"
+              value={window.location.href}
+            ></input>
+            <input type="hidden" name="_captcha" value="false"></input>
+            <input type="hidden" name="_template" value="table"></input>
+            <input
+              type="hidden"
+              name="_subject"
+              value={formData.nombrecomercio + " - " + formData.nombre}
+            ></input>
           </Grid>
         ))}
         <Grid item xs={12}>
@@ -59,6 +67,8 @@ const SumateForm = () => {
 };
 
 const GridForm = styled(Grid)(({ theme }) => ({
+  backgroundColor: "#EBF0F1",
+  marginTop: 40,
   alignSelf: "center",
   borderRadius: 8,
   padding: !isMobile ? "60px 14%" : "50px 8%",

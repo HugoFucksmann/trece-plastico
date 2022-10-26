@@ -80,7 +80,7 @@ const ItemSlider = ({ obj }) => {
         {obj.title}
       </Typography>
       <Typography
-        variant="h4"
+        variant="h5"
         style={{ fontWeight: "normal", marginBottom: 12 }}
       >
         {obj.sub}
@@ -94,7 +94,7 @@ const ItemSlider = ({ obj }) => {
       </Typography>
 
       {obj.types.map((text) => (
-        <Typography key={text} variant="h6">
+        <Typography key={text} variant="h6" color={"#000"}>
           {text}
         </Typography>
       ))}

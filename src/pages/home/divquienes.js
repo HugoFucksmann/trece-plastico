@@ -4,28 +4,31 @@ import { useNavigate } from "react-router-dom";
 import BtnRounded from "../../shared/btnRounded";
 import TitleTrece from "../../shared/title";
 
-const DivQuienes = (props) => {
+const DivQuienes = () => {
   let navigate = useNavigate();
   return (
     <div
       style={{
-        margin: isMobile ? "80px 4%" : "16vh 0px",
+        margin: isMobile ? "80px 4%" : "16vh 18vw",
+        textAlign: "center",
       }}
     >
-      <TitleTrece>{gggg.title}</TitleTrece>
-      <Typography variant="h4">{gggg.subtitle}</Typography>
+      <TitleTrece>{data.title}</TitleTrece>
+      <Typography variant="h4" style={{ color: "grey" }}>
+        {data.subtitle}
+      </Typography>
 
       <BtnRounded
         onClick={() => navigate("/quienessomos")}
         style={{ marginTop: 50 }}
       >
-        {gggg.btnText}
+        {data.btnText}
       </BtnRounded>
     </div>
   );
 };
 
-const gggg = {
+const data = {
   title: "quiens somos",
   btnText: "CONOCENOS",
   subtitle: `Creamos bolsas de polietileno para diferentes aplicaciones en el mercado. Diseñamos

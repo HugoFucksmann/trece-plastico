@@ -4,15 +4,8 @@ import { isMobile } from "../../helpers/isMobile";
 
 const SumateItems = () => {
   return (
-    <div
-      style={{
-        marginRight: !isMobile && "16%",
-        marginLeft: !isMobile && "16%",
-        marginTop: 120,
-        marginBottom: 40,
-      }}
-    >
-      <div style={{ marginBottom: 160 }}>
+    <div style={useStyles.containerDiv}>
+      <div style={useStyles.divText}>
         <Typography variant="h3">
           Diversificá tu propuesta con{" "}
           <span style={{ color: "#47CBBA" }}> productos </span>
@@ -21,29 +14,13 @@ const SumateItems = () => {
           confiables y de la más alta calidad.
         </Typography>
         <Typography variant="h3">Siendo parte de nuestra red de</Typography>
-        <Typography variant="h3" style={{ marginBottom: 60 }}>
-          distribuidores, obtenés:
-        </Typography>
+        <Typography variant="h3">distribuidores, obtenés:</Typography>
       </div>
       <Grid container spacing={6} alignItems="center" justifyContent="center">
         {sumateItemsData.map((obj, i) => (
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            key={obj.txt}
-            style={{ marginBottom: !isMobile && 50 }}
-          >
-            <img src={obj.icon} style={{ width: isMobile ? "30%" : "64%" }} />
-            <Typography
-              variant={isMobile ? "h4" : "h4"}
-              style={{
-                height: 40,
-                marginTop: 12,
-                fontFamily: "museoSansRoundedBold",
-              }}
-            >
+          <Grid item xs={12} sm={6} md={4} key={obj.txt} style={useStyles.grid}>
+            <img src={obj.icon} style={useStyles.imgIcon} />
+            <Typography variant="h4" style={useStyles.text}>
               {obj.txt}
             </Typography>
           </Grid>
@@ -53,10 +30,22 @@ const SumateItems = () => {
   );
 };
 
-const campos = [
-  { md: 6, name: "Nombre" },
-  { md: 6, name: "Email" },
-  { md: 12, name: "Mensaje" },
-];
+const useStyles = {
+  containerDiv: {
+    marginRight: !isMobile && "16%",
+    marginLeft: !isMobile && "16%",
+    marginTop: 120,
+    marginBottom: 40,
+  },
+  divText: { marginBottom: !isMobile ? 160 : 60 },
+  grid: { marginBottom: !isMobile && 50 },
+  text: {
+    height: 42,
+    marginTop: 12,
+    fontFamily: "museoSansRoundedBold",
+    color: "#000",
+  },
+  imgIcon: { width: isMobile ? "24%" : "64%" },
+};
 
 export default SumateItems;

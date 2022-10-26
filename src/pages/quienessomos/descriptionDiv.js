@@ -50,19 +50,12 @@ const GridText = ({ text, first, istitle }) => {
           </Typography>
         </>
       )}
-      <div
-        style={{
-          width: 36,
-          borderBottom: "4px solid #00C5B1",
-          borderRadius: 5,
-          marginBottom: 40,
-          marginTop: 10,
-        }}
-      ></div>
-      <Typography variant="h4">{text.txt1}</Typography>
+      <StyledSeparator />
+      <StyledText variant="h4">{text.txt1}</StyledText>
       <br />
-      <Typography variant="h4">{text.txt2}</Typography> <br />
-      <Typography variant="h4">{text.txt3}</Typography>
+      <StyledText variant="h4">{text.txt2}</StyledText>
+      <br />
+      <StyledText variant="h4">{text.txt3}</StyledText>
     </Grid>
   );
 };
@@ -71,6 +64,18 @@ const StyledImg = styled("img")(({ theme }) => ({
   width: isMobile ? "74%" : "70%",
   height: isMobile ? "auto" : "auto",
   borderRadius: "50%",
+}));
+
+const StyledSeparator = styled("div")(({ theme }) => ({
+  width: 36,
+  borderBottom: "4px solid #00C5B1",
+  borderRadius: 5,
+  marginBottom: 40,
+  marginTop: 10,
+}));
+
+const StyledText = styled(Typography)(({ theme }) => ({
+  color: "grey",
 }));
 
 DescriptionDiv.defaultProps = {

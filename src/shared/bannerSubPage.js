@@ -24,7 +24,7 @@ const BannerSubPage = ({ page }) => {
           marginLeft: isMobile && "4%",
         }}
       >
-        {page.second}{" "}
+        {page.second}
         <span style={{ color: "#47CBBA" }}> {page.last.toUpperCase()} </span>
       </Typography>
 

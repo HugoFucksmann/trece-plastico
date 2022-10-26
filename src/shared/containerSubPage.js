@@ -12,7 +12,7 @@ const ContainerDiv = styled("div")(({ theme }) => ({
   textAlign: "center",
   paddingRight: !isMobile ? "14%" : "8%",
   paddingLeft: !isMobile ? "14%" : "8%",
-  maxWidth: 1800,
+  maxWidth: 1400,
   margin: "auto",
 }));
 

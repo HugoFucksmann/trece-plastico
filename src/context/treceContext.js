@@ -1,5 +1,5 @@
 import React, { createContext, Component } from "react";
-import { BannerSubPageData, landingData, productosData } from "./dataTrece";
+import { BannerSubPageData } from "./dataTrece";
 
 export const TreceContext = createContext();
 
@@ -9,8 +9,6 @@ class TreceProvider extends Component {
 
     this.state = {
       ready: false,
-      landingData: landingData,
-      productosData: productosData,
       BannerSubPageData: BannerSubPageData,
     };
   }
