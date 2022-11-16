@@ -5,23 +5,20 @@ const LandingTrece = (props) => {
   const str = props.data.txtT;
 
   const coloredStr = str.match("derrames");
-  const [before, after] = str.split("derrames");
+  const [before, after] = ["Especialistas", "en Bolsas"];
 
   return (
     <LayoutLanding {...props}>
       <TitleTextDiv>
         <Fade in={true} timeout={700}>
           <Typography variant="h1" style={{ marginBottom: 22 }}>
-            {before}
-            {coloredStr && coloredStr[0] && (
-              <SpanColor>{coloredStr[0]}</SpanColor>
-            )}
-            {after}
+            <SpanColor>Especialistas</SpanColor>
+            <br /> en Bolsas
           </Typography>
         </Fade>
 
         <Fade in={true} timeout={1800}>
-          <Typography variant="h4">{props.data.txt1.toUpperCase()}</Typography>
+          <Typography variant="h4">{props.data.txt1}</Typography>
         </Fade>
       </TitleTextDiv>
     </LayoutLanding>
@@ -31,8 +28,8 @@ const LandingTrece = (props) => {
 const LayoutLanding = styled("div")(({ theme, data }) => ({
   height: "100%",
   width: "100%",
+  background: `url(${data.img}) no-repeat`,
 
-  background: `url(${data.img}) no-repeat center`,
   backgroundSize: "cover",
 }));
 
@@ -52,9 +49,9 @@ const SpanColor = styled("span")(({ theme, data }) => ({
 
 LandingTrece.defaultProps = {
   data: {
-    txtT: "No mas derrames o bolsas rotas",
+    txtT: "Especialistas en Bolsas",
 
-    txt1: "eleginos y logra el mejor resultado en las tareas de todos los dias",
+    txt1: "Eleginos y lográ el mejor resultado en las tareas de todos los días",
     img: "",
   },
 };

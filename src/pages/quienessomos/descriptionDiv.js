@@ -12,7 +12,7 @@ const DescriptionDiv = (props) => {
         marginTop: isMobile ? 60 : 120,
       }}
     >
-      <Grid container spacing={4}>
+      <Grid container spacing={4} style={{ marginTop: isMobile && -80 }}>
         <GridImg imagen={data.imagen} first={true} />
 
         <GridText text={data.text} first={false} istitle={istitle} />
@@ -61,9 +61,9 @@ const GridText = ({ text, first, istitle }) => {
 };
 
 const StyledImg = styled("img")(({ theme }) => ({
-  width: isMobile ? "74%" : "70%",
+  width: isMobile ? "54%" : "70%",
   height: isMobile ? "auto" : "auto",
-  borderRadius: "50%",
+  // borderRadius: "50%",
 }));
 
 const StyledSeparator = styled("div")(({ theme }) => ({

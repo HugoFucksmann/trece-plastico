@@ -10,7 +10,7 @@ import icon5 from "../assets/Sumate/Layer5.png";
 export const BannerSubPageData = {
   productos: {
     title: "Soluciones a la medida de TODOS",
-    first: "soluciones a la",
+    first: "Soluciones a la",
     second: "medida de",
     last: "todos",
     subTitle: "",

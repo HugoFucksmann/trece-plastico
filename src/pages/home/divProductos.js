@@ -15,12 +15,25 @@ const DivProductos = () => {
   return (
     <ContainerDiv>
       <TitleTrece>{productosData.title}</TitleTrece>
-
+      <Typography variant="h4">
+        Contamos con más de S0 productos realizados en PEBD reciclado.
+        Cumpliendo con estrictas normas de calidad, ofrecen soluciones a la
+        medida de tus necesidades
+      </Typography>
       <Products>
         {productosData.productos.map((producto) => (
-          <Grid item xs={12} md={4} key={producto.name}>
+          <Grid item xs={4} md={4} key={producto.name}>
             <StyledImg src={producto.img} />
-            <Typography variant="h3">{producto.name}</Typography>
+            <Typography
+              variant="h3"
+              style={{
+                color: "#808080",
+                fontFamily: "museoSansRoundedBold",
+                fontSize: isMobile && "1rem",
+              }}
+            >
+              {producto.name}
+            </Typography>
           </Grid>
         ))}
       </Products>
@@ -33,11 +46,10 @@ const DivProductos = () => {
 };
 
 const StyledImg = styled("img")(() => ({
-  width: isMobile ? "34vw" : "16vw",
+  width: isMobile ? "26vw" : "16vw",
   height: "auto",
-  borderRadius: "50%",
-
-  margin: 40,
+  //borderRadius: "50%",
+  margin: !isMobile ? 40 : 12,
   marginBottom: 10,
 }));
 
@@ -53,7 +65,7 @@ const ContainerDiv = styled("div")(() => ({
 
 const Products = styled(Grid)(() => ({
   display: "flex",
-  flexDirection: isMobile ? "column" : "row",
+  flexDirection: isMobile ? "row" : "row",
   justifyContent: "center",
   marginBottom: 60,
 }));

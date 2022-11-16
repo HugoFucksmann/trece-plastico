@@ -18,7 +18,7 @@ const SumateItems = () => {
       </div>
       <Grid container spacing={6} alignItems="center" justifyContent="center">
         {sumateItemsData.map((obj, i) => (
-          <Grid item xs={12} sm={6} md={4} key={obj.txt} style={useStyles.grid}>
+          <Grid item xs={4} sm={4} md={4} key={obj.txt} style={useStyles.grid}>
             <img src={obj.icon} style={useStyles.imgIcon} />
             <Typography variant="h4" style={useStyles.text}>
               {obj.txt}
@@ -43,9 +43,10 @@ const useStyles = {
     height: 42,
     marginTop: 12,
     fontFamily: "museoSansRoundedBold",
-    color: "#000",
+    color: "#5F6F81",
+    fontSize: isMobile && "0.8rem",
   },
-  imgIcon: { width: isMobile ? "24%" : "64%" },
+  imgIcon: { width: isMobile ? "84%" : "64%" },
 };
 
 export default SumateItems;

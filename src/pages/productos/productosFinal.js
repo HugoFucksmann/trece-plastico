@@ -29,6 +29,7 @@ const ProductosFinal = () => {
       <Typography
         variant="h3"
         style={{
+          fontFamily: "museoSansRoundedBold",
           color: "#151F5B",
           textAlign: "center",
           marginTop: 40,
@@ -38,7 +39,11 @@ const ProductosFinal = () => {
       </Typography>
       <Typography
         variant="h3"
-        style={{ color: "#151F5B", textAlign: "center" }}
+        style={{
+          color: "#151F5B",
+          textAlign: "center",
+          fontFamily: "museoSansRoundedBold",
+        }}
       >
         para las tareas del hogar.
       </Typography>

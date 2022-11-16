@@ -14,10 +14,12 @@ const DivQuienes = () => {
       }}
     >
       <TitleTrece>{data.title}</TitleTrece>
-      <Typography variant="h4" style={{ color: "grey" }}>
-        {data.subtitle}
+      <Typography variant="h4" style={{ color: "grey", marginBottom: 28 }}>
+        {data.subtitle1}
       </Typography>
-
+      <Typography variant="h4" style={{ color: "grey" }}>
+        {data.subtitle2}
+      </Typography>
       <BtnRounded
         onClick={() => navigate("/quienessomos")}
         style={{ marginTop: 50 }}
@@ -31,9 +33,9 @@ const DivQuienes = () => {
 const data = {
   title: "quiens somos",
   btnText: "CONOCENOS",
-  subtitle: `Creamos bolsas de polietileno para diferentes aplicaciones en el mercado. Diseñamos
-  propuestas para empresas, instituciones y distribuidores de todo el país.
-  Somos una empresa que une compromiso ambiental y calidad para brindarte
+  subtitle1: `Creamos bolsas de polietileno para diferentes aplicaciones en el mercado. Diseñamos
+  propuestas para empresas, instituciones y distribuidores de todo el país.`,
+  subtitle2: ` Somos una empresa que une compromiso ambiental y calidad para brindarte
   productos confiables.`,
 };
 

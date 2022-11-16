@@ -22,7 +22,7 @@ const FuturoQuienes = () => {
         // style={{ marginLeft: isMobile && "-24%", width: isMobile && "84vw" }}
       >
         <GridText />
-        <GridImg />
+        {!isMobile && <GridImg />}
       </Grid>
     </div>
   );
@@ -60,7 +60,7 @@ const GridText = () => {
       >
         <img src={markF} alt="dgfdsg" style={{ width: "18%" }} />
         <div style={{ marginLeft: isMobile ? 20 : 30 }}>
-          <Typography variant="h2">El futuro si</Typography>
+          <Typography variant="h2">El futuro sí</Typography>
 
           <Typography variant="h2" style={{ color: "#00C5B1" }}>
             nos importa
@@ -76,6 +76,17 @@ const GridText = () => {
           marginTop: 10,
         }}
       ></div>
+      {isMobile && (
+        <img
+          src={futuro}
+          style={{
+            width: "84%",
+            height: "auto",
+            marginBottom: 30,
+          }}
+          alt="futuro"
+        />
+      )}
       <Typography variant="h4">{data.txt1}</Typography>
       <br />
       <Typography variant="h4">{data.txt2}</Typography> <br />

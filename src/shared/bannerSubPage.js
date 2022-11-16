@@ -47,7 +47,7 @@ const ContainerDiv = styled("div")(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   textAlign: "center",
-  height: isMobile ? "60vh" : "64vh",
+  height: isMobile ? "44vh" : "64vh",
   background: `url(${banner})`,
   paddingRight: !isMobile ? "22%" : "4%",
   paddingLeft: !isMobile ? "22%" : "4%",
