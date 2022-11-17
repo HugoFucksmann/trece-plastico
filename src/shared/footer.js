@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Divider, Grid, Typography } from "@mui/material";
 
 import fb from "../assets/home/facebook.png";
+import linkedin from "../assets/linkedin.png";
 import insta from "../assets/home/instagram.png";
 import logo from "../assets/LogoBlanco.png";
 import tel from "../assets/whatsapp.png";
@@ -131,7 +132,7 @@ const socialMediaData = [
   },
   { ico: fb, alt: "facebook", link: "https://facebook.com/plasticosgaetani/" },
   {
-    ico: insta,
+    ico: linkedin,
     alt: "linkedin",
     link: "https://linkedin.com/company/plasticos-gaetani/",
   },

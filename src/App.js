@@ -12,6 +12,8 @@ import QuienesSomos from "./pages/quienessomos";
 import HeaderTrece from "./shared/header";
 import FooterTrece from "./shared/footer";
 import BtnScroll from "./shared/btnScrollToTop";
+import { isMobile } from "./helpers/isMobile";
+import HeaderTreceMobile from "./shared/header";
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
       <CssBaseline />
       <TreceProvider>
         <BrowserRouter>
-          <HeaderTrece />
+          {isMobile ? <HeaderTreceMobile /> : <HeaderTrece />}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/productos" element={<Productos />} />
