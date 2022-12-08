@@ -27,16 +27,14 @@ export const BannerSubPageData = {
     first: "Nuestros",
     second: "",
     last: "distribuidores",
-    subTitle:
-      "Nuestras líneas de bolsas son distribuidas y comercializadas en gran parte de la Argentina.",
+    subTitle: "",
   },
   sumate: {
-    title: "Quiero ser distribuidor",
-    first: "Quiero ser",
+    title: "Sumate como distribudor",
+    first: "Sumate como",
     second: "",
     last: "distribuidor",
-    subTitle:
-      "¿Tenés un comercio y querés incorporar nuestros   productos? ¡Sumate como distribuidor oficial de    Plásticos Gaetani!",
+    subTitle: "",
   },
 };
 

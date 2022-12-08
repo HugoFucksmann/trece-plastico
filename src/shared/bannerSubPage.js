@@ -13,6 +13,7 @@ const BannerSubPage = ({ page }) => {
           marginTop: 30,
           marginRight: isMobile && "4%",
           marginLeft: isMobile && "4%",
+          fontSize: !isMobile && "3.2rem",
         }}
       >
         {page.first}
@@ -22,6 +23,7 @@ const BannerSubPage = ({ page }) => {
         style={{
           marginRight: isMobile && "4%",
           marginLeft: isMobile && "4%",
+          fontSize: !isMobile && "3.2rem",
         }}
       >
         {page.second}
@@ -47,8 +49,9 @@ const ContainerDiv = styled("div")(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   textAlign: "center",
-  height: isMobile ? "44vh" : "64vh",
+  height: isMobile ? "44vh" : "56vh",
   background: `url(${banner})`,
+  marginTop: isMobile && "8%",
   paddingRight: !isMobile ? "22%" : "4%",
   paddingLeft: !isMobile ? "22%" : "4%",
 }));

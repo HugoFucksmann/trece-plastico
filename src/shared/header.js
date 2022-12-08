@@ -22,8 +22,9 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { Slide } from "@mui/material";
-
 import logo from "../assets/home/Logo-Plasticos.png";
+import LogoBlanco from "../assets/LogoBlanco.png";
+import { isMobile } from "../helpers/isMobile";
 
 const drawerWidth = 240;
 
@@ -142,17 +143,19 @@ export default function HeaderTreceMobile(props) {
                 justifyContent: "center",
               }}
             >
-              <img
-                onClick={() => navigate("/")}
-                src={props.logo}
-                alt="logo"
-                style={{
-                  margin: 12,
-                  height: 34,
-                  cursor: "pointer",
-                  alignSelf: "center",
-                }}
-              />
+              {!open && (
+                <img
+                  onClick={() => navigate("/")}
+                  src={props.logo}
+                  alt="logo"
+                  style={{
+                    margin: 12,
+                    height: 34,
+                    cursor: "pointer",
+                    alignSelf: "center",
+                  }}
+                />
+              )}
             </div>
           </Toolbar>
         </AppBar>
@@ -199,7 +202,13 @@ export default function HeaderTreceMobile(props) {
                       >
                         •
                       </span>
-                      <Typography textAlign="center" style={{ color: "#fff" }}>
+                      <Typography
+                        textAlign="center"
+                        style={{
+                          color: "#fff",
+                          fontFamily: "museoSansRoundedBold",
+                        }}
+                      >
                         {page.txt}
                       </Typography>
                     </MenuItem>

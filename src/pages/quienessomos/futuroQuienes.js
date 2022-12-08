@@ -80,7 +80,7 @@ const GridText = () => {
         <img
           src={futuro}
           style={{
-            width: "84%",
+            width: isMobile ? "74%" : "84%",
             height: "auto",
             marginBottom: 30,
           }}

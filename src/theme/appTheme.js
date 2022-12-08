@@ -71,7 +71,7 @@ appTheme.typography.h1 = {
 };
 
 appTheme.typography.h2 = {
-  fontSize: isMobile ? "1.7rem" : "2rem",
+  fontSize: isMobile ? "1.7rem" : "2.2rem",
   lineHeight: !isMobile && "40px",
   fontFamily: "museoSansRoundedBold",
   color: "#000",
@@ -85,7 +85,7 @@ appTheme.typography.h3 = {
   fontStyle: "inherit",
 };
 appTheme.typography.h4 = {
-  fontSize: isMobile ? "1.1em" : "1.4em",
+  fontSize: isMobile ? "1.1em" : "1.2em",
   fontFamily: "museoSlab",
   color: appTheme.palette.primary.soft,
   fontWeight: "normal",

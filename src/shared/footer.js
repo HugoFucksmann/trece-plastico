@@ -36,8 +36,13 @@ const FooterTrece = () => {
           md={4}
           style={{ marginBottom: isMobile && 12, display: "flex" }}
         >
-          <InfoIcon src={marker} atl="marker1" />
-          <div>
+          <InfoIcon src={marker} atl="marker1" style={{ height: 38 }} />
+          <div
+            style={{
+              cursor: "pointer",
+            }}
+            onClick={() => window.open("https://goo.gl/maps/44SJLQgfBRG6akQb9")}
+          >
             <Typography variant="h5" style={{ color: "#fff" }}>
               Cuyo 211, La Reja
             </Typography>
@@ -49,9 +54,7 @@ const FooterTrece = () => {
         <Grid item xs={12} md={4}>
           <div
             style={{ display: "flex", marginBottom: 24, cursor: "pointer" }}
-            onClick={() =>
-              window.open("https://wa.me/54911276404031", "_blank")
-            }
+            onClick={() => window.open("https://wa.me/5491127640403", "_blank")}
           >
             <InfoIcon src={tel} atl="tel" />
             <TextInfo variant="h5">+54 9 11 27640403</TextInfo>
@@ -69,7 +72,12 @@ const FooterTrece = () => {
         </Grid>
       </Grid>
       <Divider variant="middle" color="#007DCA" style={{ margin: 30 }} />
-      <StyledText>
+      <StyledText
+        style={{
+          cursor: "pointer",
+        }}
+        onClick={() => window.open("https://www.instagram.com/trececomunica/")}
+      >
         Desarrollado por{" "}
         <span style={{ fontWeight: "bold" }}>TRECE Comunicación </span>
       </StyledText>

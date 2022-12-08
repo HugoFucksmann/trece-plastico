@@ -25,7 +25,7 @@ const QuienesSomos = () => {
     <Fade in={true}>
       <div>
         <BannerSubPage page={BannerSubPageData.quienes} />
-        <div style={{ marginBottom: isMobile ? 60 : 120 }} />
+        <div style={{ marginBottom: isMobile ? 60 : 40 }} />
         <ContainerSubPage>
           <DescriptionDiv data={itemsData[0]} istitle={false} />
         </ContainerSubPage>

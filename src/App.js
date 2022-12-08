@@ -9,12 +9,12 @@ import Productos from "./pages/productos";
 import Sumate from "./pages/sumate";
 import DondeComprar from "./pages/dondecomprar";
 import QuienesSomos from "./pages/quienessomos";
-import HeaderTrece from "./shared/header";
+import HeaderTrece from "./shared/header2";
 import FooterTrece from "./shared/footer";
 import BtnScroll from "./shared/btnScrollToTop";
 import { isMobile } from "./helpers/isMobile";
 import HeaderTreceMobile from "./shared/header";
-
+console.log(isMobile);
 function App() {
   return (
     <ThemeProvider theme={appTheme}>

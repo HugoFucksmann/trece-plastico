@@ -20,7 +20,7 @@ const ProductosFinal = () => {
       <img
         src={logoCol}
         style={{
-          width: isMobile ? "60vw" : "20vw",
+          width: isMobile ? "60vw" : "16vw",
           alignSelf: "center",
           marginTop: !isMobile ? "-7.8vw" : "-16vw",
           marginBottom: isMobile && "-8.8vw",
@@ -35,7 +35,7 @@ const ProductosFinal = () => {
           marginTop: 40,
         }}
       >
-        Un compañero confiable
+        <span style={{ fontSize: "1.2em" }}> Un compañero </span>confiable
       </Typography>
       <Typography
         variant="h3"
@@ -50,7 +50,7 @@ const ProductosFinal = () => {
       <div
         style={{
           display: "flex",
-          width: isMobile ? "94%" : "40%",
+          width: isMobile ? "94%" : "34%",
           margin: "80px auto",
         }}
       >
@@ -79,7 +79,7 @@ const ItemSlider = ({ obj }) => {
       />
 
       <Typography
-        variant="h3"
+        variant="h4"
         style={{ marginTop: 16, fontFamily: "museoSansRoundedBold" }}
       >
         {obj.title}

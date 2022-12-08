@@ -46,7 +46,7 @@ const DivProductos = () => {
 };
 
 const StyledImg = styled("img")(() => ({
-  width: isMobile ? "26vw" : "16vw",
+  width: isMobile ? "26vw" : "12vw",
   height: "auto",
   //borderRadius: "50%",
   margin: !isMobile ? 40 : 12,
@@ -75,7 +75,7 @@ const productosData = {
   subtitle: `Contamos con más de 50 productos realizados en PEBD reciclado.
   Cumpliendo con estrictas normas de calidad, ofrecen soluciones a la
   medida de tus necesidades.`,
-  btnText: "Ver Mas",
+  btnText: "VER MAS",
   func: () => {},
   productos: [
     {

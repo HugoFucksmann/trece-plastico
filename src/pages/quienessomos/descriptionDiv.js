@@ -23,7 +23,12 @@ const DescriptionDiv = (props) => {
 
 const GridImg = ({ imagen, first }) => {
   return (
-    <Grid item md={5} xs={12}>
+    <Grid
+      item
+      md={5}
+      xs={12}
+      style={{ display: isMobile && "flex", marginTop: isMobile && 30 }}
+    >
       <StyledImg src={imagen} />
     </Grid>
   );
@@ -61,7 +66,7 @@ const GridText = ({ text, first, istitle }) => {
 };
 
 const StyledImg = styled("img")(({ theme }) => ({
-  width: isMobile ? "54%" : "70%",
+  width: isMobile ? "54%" : "78%",
   height: isMobile ? "auto" : "auto",
   // borderRadius: "50%",
 }));

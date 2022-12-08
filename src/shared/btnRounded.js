@@ -20,7 +20,7 @@ const BtnStyle = styled(Button)(({ theme }) => ({
   background: "linear-gradient(to right bottom, #244c83, #6ec4b0)",
   transition: "all 0.3s",
   color: "#fff",
-  //border: "1px solid #fff",
+  fontWeight: "bold",
   "&:hover": {
     transform: "scale(1.1)",
   },
