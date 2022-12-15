@@ -7,7 +7,10 @@ const MapaDiv = () => {
   /*   const {} = useContext(TreceContext); */
   return (
     <div style={{ marginTop: 100, marginBottom: 80 }}>
-      <TitleTrece>¡Buscá tu punto de venta más cercano!</TitleTrece>
+      <TitleTrece>
+        Nuestras líneas de bolsas son distribuidas y comercializadas en gran
+        parte de la Argentina. ¡Buscá el punto de venta más cercano!
+      </TitleTrece>
       <br />
       <iframe
         loading="lazy"

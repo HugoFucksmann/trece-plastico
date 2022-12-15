@@ -15,7 +15,7 @@ const Home = () => {
       <CarouselFullScreen />
       <DivQuienes />
       <DivProductos />
-      <DivIg />
+      {/* <DivIg /> */}
     </>
   );
 };

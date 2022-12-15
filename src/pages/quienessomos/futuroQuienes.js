@@ -98,15 +98,17 @@ const GridText = () => {
 };
 
 const data = {
-  txt1: `Sabemos el impacto que tienen nuestras acciones en el futuro del
-    planeta. Es por eso que nuestra firma tiene una fuerte politica de
-    compromiso ambiental`,
-  txt2: `Nuestros productos se realizan a partir de Polietileno de Baja
-    Densidad (PEBD) reciclado. Su origen proviene de los restos de silo
-    bolsas, film stretch, film termocontraible y scrap de origen industrial.`,
-  txt3: `Cada una de las líneas de producción son optimizadas de manera
-    permanente para reducir el consumo de energía, agua y la generación
-    de residuos industriales.`,
+  txt1: `Sabemos el impacto que tienen nuestras acciones en el futuro del planeta. 
+  Es por eso que nuestra firma tiene una fuerte política de compromiso ambiental.`,
+  txt2: `Nuestros productos se realizan a partir de Polietileno de Baja Densidad 
+  (PEBD) reciclado. Su origen proviene de los restos de silo bolsas, film stretch, 
+  film termocontraible y scrap de origen industrial.`,
+  txt3: ``,
 };
+
+/* 
+Cada una de las líneas de producción son optimizadas de manera
+    permanente para reducir el consumo de energía, agua y la generación
+    de residuos industriales. */
 
 export default FuturoQuienes;

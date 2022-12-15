@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import header1 from "../../assets/home/Header.png";
+import Banner1 from "../../assets/landing/Banner1.png";
+import Banner2 from "../../assets/landing/Banner2.png";
+import Banner3 from "../../assets/landing/Banner3.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -40,19 +42,19 @@ export default function CarouselFullScreen(props) {
 
 const data = [
   {
-    img: header1,
+    img: Banner1,
+    txtT: `Especialistas en Bolsas`,
+
+    txt1: "Eleginos y lográ el mejor resultado en las tareas de todos los días",
+  },
+  {
+    img: Banner2,
     txtT: `No mas derrames o bolsas rotas`,
 
     txt1: "Eleginos y logra el mejor resultado en tus tareas de todos los dias",
   },
   {
-    img: header1,
-    txtT: `No mas derrames o bolsas rotas`,
-
-    txt1: "Eleginos y logra el mejor resultado en tus tareas de todos los dias",
-  },
-  {
-    img: header1,
+    img: Banner3,
     txtT: `No mas derrames o bolsas rotas`,
 
     txt1: "Eleginos y logra el mejor resultado en tus tareas de todos los dias",

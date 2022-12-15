@@ -111,9 +111,7 @@ const unoS1 = {
   img: final1,
   title: "Bolsas de Residuos",
   sub: "",
-  txt: `Confeccionadas en dos medidas
-  diferentes, pueden ser adquiridas
-  en paquetes de 10 unidades.`,
+  txt: `Confeccionadas en dos medidas diferentes, pueden ser adquiridas en paquetes de 10 unidades`,
 
   types: ["45x60 cm.", "50x70 cm."],
 };
@@ -122,9 +120,7 @@ const dosS1 = {
   img: final2,
   title: "Bolsas de Consorcio",
   sub: "Linea estándar",
-  txt: `Confeccionadas en tres medidas
-  diferentes, pueden ser adquiridas
-  en paquetes de 10 unidades.`,
+  txt: `Confeccionadas en tres medidas diferentes, pueden ser adquiridas en paquetes de 10 unidades.`,
 
   types: ["60x90 cm.", "80x100 cm.", "90x120 cm."],
 };

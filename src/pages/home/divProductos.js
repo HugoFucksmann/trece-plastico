@@ -71,10 +71,10 @@ const Products = styled(Grid)(() => ({
 }));
 
 const productosData = {
-  title: "Productos",
+  title: "Nuestros productos",
   subtitle: `Contamos con más de 50 productos realizados en PEBD reciclado.
-  Cumpliendo con estrictas normas de calidad, ofrecen soluciones a la
-  medida de tus necesidades.`,
+   Cumpliendo con estrictas normas de calidad, ofrecen soluciones a la medida 
+   de tus necesidades.`,
   btnText: "VER MAS",
   func: () => {},
   productos: [

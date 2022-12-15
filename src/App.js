@@ -1,5 +1,5 @@
 import appTheme from "./theme/appTheme";
-import { ThemeProvider } from "@mui/system";
+
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import TreceProvider from "./context/treceContext";
@@ -14,8 +14,10 @@ import FooterTrece from "./shared/footer";
 import BtnScroll from "./shared/btnScrollToTop";
 import { isMobile } from "./helpers/isMobile";
 import HeaderTreceMobile from "./shared/header";
-console.log(isMobile);
+import { ThemeProvider } from "@emotion/react";
+
 function App() {
+  console.log("isMobile ", isMobile);
   return (
     <ThemeProvider theme={appTheme}>
       <CssBaseline />

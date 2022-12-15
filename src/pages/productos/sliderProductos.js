@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Pagination, Navigation } from "swiper";
-import { isPlainObject } from "@mui/utils";
+
 import { Typography } from "@mui/material";
 
 import { isMobile } from "../../helpers/isMobile";
@@ -84,7 +84,7 @@ const ItemSlider = ({ obj }) => {
         paddingLeft: 20,
       }}
     >
-      <img src={obj.img} alt={isPlainObject.title} />
+      <img src={obj.img} alt={"dfsd"} />
 
       <Typography
         variant="h4"
