@@ -4,7 +4,6 @@ const TitleTrece = (props) => {
   const { border = 36 } = props;
   return (
     <div
-      {...props}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -12,7 +11,7 @@ const TitleTrece = (props) => {
         marginBottom: 40,
       }}
     >
-      <Typography variant="h2" color={"#000"}>
+      <Typography variant="h2" color={"#000"} {...props}>
         {props.children}
       </Typography>
       <div

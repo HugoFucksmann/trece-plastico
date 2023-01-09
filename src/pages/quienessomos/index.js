@@ -32,7 +32,7 @@ const QuienesSomos = () => {
         <FuturoQuienes />
 
         <ContainerSubPage>
-          <DescriptionDiv data={itemsData[1]} />
+          <DescriptionDiv data={itemsData[1]} icon={true} />
         </ContainerSubPage>
       </div>
     </Fade>

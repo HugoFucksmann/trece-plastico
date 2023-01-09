@@ -37,11 +37,8 @@ const dataFirstProduct = {
   imagen: principal,
   text: {
     title: "",
-    txt1: `Contamos con más de 50 productos, los cuales responden a diferentes 
-    necesidades del mercado. Cada uno es realizado bajo estrictas normas de calidad, lo cual nos asegura resultados de excelencia.`,
-    txt2: `Cada uno es realizado bajo estrictas
-    normas de calidad, lo cual nos
-    asegura resultados de excelencia.`,
+    txt1: `Contamos con más de 50 productos, los cuales responden a diferentes necesidades del mercado.`,
+    txt2: `Cada uno es realizado bajo estrictas normas de calidad, lo cual nos asegura resultados de excelencia.`,
   },
 };
 

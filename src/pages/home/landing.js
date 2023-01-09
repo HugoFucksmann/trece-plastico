@@ -9,8 +9,11 @@ const LandingTrece = (props) => {
 
   return (
     <LayoutLanding {...props}>
-      <TitleTextDiv>
-        <Fade in={true} timeout={700}>
+      <img
+        src={!isMobile ? props.data.img : props.data.imgM}
+        style={{ width: "100%" }}
+      />
+      {/*  <Fade in={true} timeout={700}>
           <Typography variant="h1" style={{ marginBottom: 22 }}>
             <SpanColor>Especialistas</SpanColor>
             <br /> en Bolsas
@@ -19,8 +22,7 @@ const LandingTrece = (props) => {
 
         <Fade in={true} timeout={1800}>
           <Typography variant="h4">{props.data.txt1}</Typography>
-        </Fade>
-      </TitleTextDiv>
+        </Fade> */}
     </LayoutLanding>
   );
 };
@@ -28,9 +30,9 @@ const LandingTrece = (props) => {
 const LayoutLanding = styled("div")(({ theme, data }) => ({
   height: "100%",
   width: "100%",
-  background: `url(${data.img}) no-repeat`,
-
-  backgroundSize: "cover",
+  // background: `url(${data.img}) no-repeat`,
+  marginTop: isMobile && "8vh",
+  // backgroundSize: "cover",
 }));
 
 const TitleTextDiv = styled("div")(({ theme, data }) => ({

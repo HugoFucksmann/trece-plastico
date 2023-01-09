@@ -35,7 +35,7 @@ const ProductosFinal = () => {
           marginTop: 40,
         }}
       >
-        <span style={{ fontSize: "1.2em" }}> Un compañero </span>confiable
+        <span> Un compañero </span>confiable
       </Typography>
       <Typography
         variant="h3"
@@ -119,7 +119,7 @@ const unoS1 = {
 const dosS1 = {
   img: final2,
   title: "Bolsas de Consorcio",
-  sub: "Linea estándar",
+  sub: "Línea estándar",
   txt: `Confeccionadas en tres medidas diferentes, pueden ser adquiridas en paquetes de 10 unidades.`,
 
   types: ["60x90 cm.", "80x100 cm.", "90x120 cm."],

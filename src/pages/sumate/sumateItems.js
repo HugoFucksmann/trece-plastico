@@ -13,8 +13,8 @@ const SumateItems = () => {
         <Typography variant="h3" style={{ marginBottom: 20, color: "#47CBBA" }}>
           ¡Sumate como distribuidor oficial de Plásticos Gaetani!
         </Typography>
-        <Typography variant="h3">Siendo parte de nuestra red de</Typography>
-        <Typography variant="h3">distribuidores, obtenés:</Typography>
+        <Typography variant="h3">Siendo parte, obtenés:</Typography>
+        {/* <Typography variant="h3"> </Typography> */}
       </div>
       <Grid container spacing={6} alignItems="center" justifyContent="center">
         {sumateItemsData.map((obj, i) => (
@@ -34,7 +34,7 @@ const useStyles = {
   containerDiv: {
     marginRight: !isMobile && "16%",
     marginLeft: !isMobile && "16%",
-    marginTop: 120,
+    marginTop: 100,
     marginBottom: 40,
   },
   divText: { marginBottom: !isMobile ? 160 : 60 },

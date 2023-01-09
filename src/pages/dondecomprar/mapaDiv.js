@@ -9,7 +9,9 @@ const MapaDiv = () => {
     <div style={{ marginTop: 100, marginBottom: 80 }}>
       <TitleTrece>
         Nuestras líneas de bolsas son distribuidas y comercializadas en gran
-        parte de la Argentina. ¡Buscá el punto de venta más cercano!
+        parte de la Argentina. <br />
+        <br />
+        <span>¡Buscá el punto de venta más cercano!</span>
       </TitleTrece>
       <br />
       <iframe

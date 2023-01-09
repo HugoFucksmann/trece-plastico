@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Grid, styled, Typography } from "@mui/material";
 import { isMobile } from "../../helpers/isMobile";
 import InputC from "../../shared/input";
 import BtnRounded from "../../shared/btnRounded";
+import Swal from "sweetalert2";
 
 const SumateForm = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,16 @@ const SumateForm = () => {
     rubro: "",
     telefono: "",
   });
+
+  useEffect(() => {
+    document.addEventListener("submit", () => {
+      Swal.fire(
+        "Formulario enviado con éxito !",
+        "Serás redirigido a la pagina principal",
+        "success"
+      );
+    });
+  }, []);
 
   return (
     <form
@@ -35,20 +46,21 @@ const SumateForm = () => {
                 setFormData({ ...formData, [campo]: e.target.value })
               }
             />
-            <input
-              type="hidden"
-              name="_next"
-              value={window.location.href}
-            ></input>
-            <input type="hidden" name="_captcha" value="false"></input>
-            <input type="hidden" name="_template" value="table"></input>
-            <input
-              type="hidden"
-              name="_subject"
-              value={formData.nombrecomercio + " - " + formData.nombre}
-            ></input>
           </Grid>
         ))}
+        <input
+          type="hidden"
+          name="_next"
+          value={"https://plasticosgaetani.com.ar"}
+        ></input>
+        <input type="hidden" name="_captcha" value="true"></input>
+        <input type="hidden" name="_template" value="table"></input>
+        <input
+          type="hidden"
+          name="_subject"
+          value={formData.nombrecomercio + " - " + formData.nombre}
+        ></input>
+
         <Grid item xs={12}>
           <BtnRounded
             type="submit"

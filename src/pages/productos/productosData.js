@@ -25,8 +25,7 @@ const unos2 = {
   img: BBlancas,
   title: "Bolsas blancas",
   sub: "",
-  txt: `Confeccionadas en tres medidas diferentes, pueden ser adquiridas en 
-  paquetes de 50 unidades.`,
+  txt: `Confeccionadas en cuatro medidas diferentes, pueden ser adquiridas en paquetes de 50 unidades.`,
   types: [
     "45x60 cm.",
     "60x90 cm. resistente",
@@ -38,18 +37,16 @@ const unos2 = {
 const doss2 = {
   img: BverdeE,
   title: "Bolsas verdes",
-  sub: "Linea estándar",
-  txt: `Confeccionadas en dos medidas    
-                diferentes. Pueden ser
-                adquiridas en paquetes de 50 unidades.`,
+  sub: "Línea estándar",
+  txt: `Confeccionadas en tres medidas diferentes, pueden ser adquiridas en paquetes de 50 unidades.`,
 
-  types: ["60x90 cm.", "80x100 cm."],
+  types: ["45x60 cm.", "50x70 cm.", "60x90 cm."],
 };
 
 const tress2 = {
   img: BverdeR,
   title: "Bolsas verdes",
-  sub: "Linea resistente",
+  sub: "Línea resistente",
   txt: `Confeccionadas en cuatro medidas diferentes, pueden ser adquiridas en paquetes de 50 unidades.`,
 
   types: ["80x100 cm.", "80x110 cm.", "90x120 cm.", "100x110 cm."],
@@ -122,7 +119,7 @@ const unoS1 = {
 const dosS1 = {
   img: ConsorcioEst,
   title: "Bolsas de Consorcio",
-  sub: "Linea estándar",
+  sub: "Línea estándar",
   txt: `Confeccionadas en dos medidas diferentes, pueden ser adquiridas 
   en paquetes de 50 unidades.`,
   types: ["60x90 cm.", "60x100 cm."],
@@ -131,9 +128,8 @@ const dosS1 = {
 const tresS1 = {
   img: ConsorcioRes,
   title: "Bolsas de Consorcio",
-  sub: "Linea resistente",
-  txt: `Confeccionadas en cuatro medidas diferentes, pueden ser 
-  adquiridas en paquetes de 50 unidades.`,
+  sub: "Línea resistente",
+  txt: `Confeccionadas en cuatro medidas diferentes, pueden ser adquiridas en paquetes de 50 unidades.`,
 
   types: ["80x100 cm.", "80x110 cm.", "90x120 cm.", "100x110 cm."],
 };
@@ -141,18 +137,16 @@ const tresS1 = {
 const cuatroS1 = {
   img: ConsorcioRef,
   title: "Bolsas de Consorcio",
-  sub: "Linea reforzada",
-  txt: `Confeccionadas en tres medidas
-    diferentes, pueden ser adquiridas
-    en paquetes de 50 unidades`,
+  sub: "Línea reforzada",
+  txt: `Confeccionadas en cuatro medidas diferentes, pueden ser adquiridas en paquetes de 50 unidades. `,
 
-  types: ["80x100 cm.", "80x110 cm.", "90x120 cm.", "100x110 cm."],
+  types: ["80x100 cm.", "80x110 cm.", "90x120 cm. 50 micrones ", "100x110 cm."],
 };
 
 const cincoS1 = {
   img: ConsorcioEco,
   title: "Bolsas de Consorcio",
-  sub: "Linea economica",
+  sub: "Línea económica",
   txt: `Confeccionadas en dos medidas diferentes, pueden ser adquiridas en 
   paquetes de 50 unidades.`,
 
@@ -173,7 +167,7 @@ export const dataProductos = [
 const final1 = {
   img: ConsorcioEco,
   title: "Bolsas de Consorcio",
-  sub: "Linea economica",
+  sub: "Línea económica",
   txt: `Confeccionadas en dos medidas
     diferentes, pueden ser adquiridas
     en paquetes de 50 unidades.`,
@@ -184,7 +178,7 @@ const final1 = {
 const final2 = {
   img: ConsorcioEco,
   title: "Bolsas de Consorcio",
-  sub: "Linea economica",
+  sub: "Línea económica",
   txt: `Confeccionadas en dos medidas
     diferentes, pueden ser adquiridas
     en paquetes de 50 unidades.`,

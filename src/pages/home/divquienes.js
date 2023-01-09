@@ -31,7 +31,7 @@ const DivQuienes = () => {
 };
 
 const data = {
-  title: "quienes somos",
+  title: "Quienes somos",
   btnText: "CONOCENOS",
   subtitle1: `Creamos bolsas de polietileno para diferentes aplicaciones en el mercado. Diseñamos propuestas para empresas, instituciones y distribuidores de todo el país.`,
   subtitle2: `Somos una empresa que une compromiso ambiental y calidad para brindarte productos confiables.`,

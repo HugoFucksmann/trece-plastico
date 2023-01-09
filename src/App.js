@@ -17,7 +17,6 @@ import HeaderTreceMobile from "./shared/header";
 import { ThemeProvider } from "@emotion/react";
 
 function App() {
-  console.log("isMobile ", isMobile);
   return (
     <ThemeProvider theme={appTheme}>
       <CssBaseline />

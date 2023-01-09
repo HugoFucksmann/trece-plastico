@@ -17,7 +17,7 @@ const FooterTrece = () => {
         <Grid item xs={12} md={4}>
           <DivGrid>
             <StyledLogo src={logo} alt="logoGaetani" />
-            <TextLogo variant="h5">Especialista en Bolasas</TextLogo>
+            <TextLogo variant="h5">Especialista en Bolsas</TextLogo>
             <div>
               {socialMediaData.map(({ ico, alt, link }) => (
                 <MediaIcon
@@ -36,7 +36,11 @@ const FooterTrece = () => {
           md={4}
           style={{ marginBottom: isMobile && 12, display: "flex" }}
         >
-          <InfoIcon src={marker} atl="marker1" style={{ height: 38 }} />
+          <img
+            src={marker}
+            atl="marker1"
+            style={{ height: 36, marginRight: 16 }}
+          />
           <div
             style={{
               cursor: "pointer",
@@ -60,15 +64,17 @@ const FooterTrece = () => {
             <TextInfo variant="h5">+54 9 11 27640403</TextInfo>
           </div>
 
-          <div
-            style={{ display: "flex", cursor: "pointer" }}
-            onClick={() =>
-              window.open("https://wa.me/54911276404031", "_blank")
-            }
+          <a
+            href="mailto:ventas@plasticosgaetani.com.ar"
+            style={{
+              display: "flex",
+              cursor: "pointer",
+              textDecoration: "none",
+            }}
           >
             <InfoIcon src={correo} atl="correo" />
             <TextInfo variant="h5">ventas@plasticosgaetani.com.ar</TextInfo>
-          </div>
+          </a>
         </Grid>
       </Grid>
       <Divider variant="middle" color="#007DCA" style={{ margin: 30 }} />

@@ -90,25 +90,6 @@ export const quienesItemData = [
   },
 ];
 
-export const dondeComprarData = [
-  {
-    dire: "Perito Moreno 2700",
-    subDire: "villa Adelina, Provincia de Buenos Aires",
-  },
-  {
-    dire: "Perito Moreno 2700",
-    subDire: "villa Adelina, Provincia de Buenos Aires",
-  },
-  {
-    dire: "Perito Moreno 2700",
-    subDire: "villa Adelina, Provincia de Buenos Aires",
-  },
-  {
-    dire: "Perito Moreno 2700",
-    subDire: "villa Adelina, Provincia de Buenos Aires",
-  },
-];
-
 export const sumateItemsData = [
   {
     txt: "Atención personalizada",
@@ -116,7 +97,7 @@ export const sumateItemsData = [
   },
   {
     txt: "Asesoramiento en el proceso de compra",
-    icon: icon6,
+    icon: icon9,
   },
   {
     txt: "Gestión de envios",
@@ -124,10 +105,10 @@ export const sumateItemsData = [
   },
   {
     txt: "Capacitaciones en ventas",
-    icon: icon8,
+    icon: icon6,
   },
   {
     txt: "Acciones de marketing",
-    icon: icon9,
+    icon: icon8,
   },
 ];

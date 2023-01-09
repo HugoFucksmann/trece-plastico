@@ -5,7 +5,7 @@ import { isMobile } from "../../helpers/isMobile";
 import TitleTrece from "../../shared/title";
 import BtnRounded from "../../shared/btnRounded";
 import { useNavigate } from "react-router-dom";
-
+import "./shake.css";
 import industriales from "../../assets/home/Bolsasescombros.png";
 import institucionales from "../../assets/home/Bolsaspatologicas.png";
 import domiciliarias from "../../assets/home/Bolsasverdes.png";
@@ -16,14 +16,14 @@ const DivProductos = () => {
     <ContainerDiv>
       <TitleTrece>{productosData.title}</TitleTrece>
       <Typography variant="h4">
-        Contamos con más de S0 productos realizados en PEBD reciclado.
-        Cumpliendo con estrictas normas de calidad, ofrecen soluciones a la
+        Contamos con más de 50 productos realizados en PEBD reciclado.
+        Cumpliendo con estrictas normas de calidad, ofrecemos soluciones a la
         medida de tus necesidades
       </Typography>
       <Products>
         {productosData.productos.map((producto) => (
           <Grid item xs={4} md={4} key={producto.name}>
-            <StyledImg src={producto.img} />
+            <StyledImg src={producto.img} className="shake" />
             <Typography
               variant="h3"
               style={{
@@ -73,9 +73,9 @@ const Products = styled(Grid)(() => ({
 const productosData = {
   title: "Nuestros productos",
   subtitle: `Contamos con más de 50 productos realizados en PEBD reciclado.
-   Cumpliendo con estrictas normas de calidad, ofrecen soluciones a la medida 
+   Cumpliendo con estrictas normas de calidad, ofrecemos soluciones a la medida 
    de tus necesidades.`,
-  btnText: "VER MAS",
+  btnText: "VER MÁS ",
   func: () => {},
   productos: [
     {

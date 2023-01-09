@@ -15,7 +15,7 @@ const BtnRounded = (props) => {
 
 const BtnStyle = styled(Button)(({ theme }) => ({
   alignSelf: "center",
-  width: 200,
+  width: 180,
   borderRadius: 25,
   background: "linear-gradient(to right bottom, #244c83, #6ec4b0)",
   transition: "all 0.3s",
